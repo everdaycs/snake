@@ -1,0 +1,131 @@
+/* Game title with a retro pixel-art style */
+.title {
+    -fx-font-family: 'Press Start 2P', cursive; /* Retro, pixelated font */
+    -fx-font-size: 48px; /* Use pixels for sizing */
+    -fx-text-fill: #ffcd38; /* Bright yellow for title, similar to image */
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.8), 5, 0.0, 0, 1);
+}
+
+/* Text field for name input with a pixel art style */
+.text-input {
+    -fx-font-family: 'Press Start 2P', cursive;
+    -fx-font-size: 14px; /* Use pixels for sizing */
+    -fx-background-color: #ffffff;
+    -fx-border-color: #ffcd38; /* Bright yellow border */
+    -fx-border-width: 2px;
+    -fx-border-radius: 5px; /* Consider removing for a more square, pixelated look */
+    -fx-padding: 5px;
+    -fx-text-fill: #000000; /* Black text for visibility */
+}
+
+
+/* Pixel-art style buttons */
+.button {
+    -fx-background-color: #ff6188; /* Vibrant pink similar to the image */
+    -fx-text-fill: #000000; /* Text color changed to black */
+    -fx-font-family: 'Press Start 2P', cursive;
+    -fx-font-size: 14px; /* Use pixels for sizing */
+    -fx-font-weight: bold; /* Make the font bold */
+    -fx-padding: 10px 20px;
+    -fx-border-color: #ffffff; /* White border for contrast */
+    -fx-border-width: 2px;
+    -fx-border-radius: 5px; /* Consider removing for a more square, pixelated look */
+    -fx-background-image: url('pixel-pattern.png'); /* Add a pixel pattern background */
+}
+
+
+.button:hover {
+    -fx-background-image: url('hover_Pressed.png'); /* Background image for hover */
+    -fx-background-color: transparent; /* Make background color transparent to show image */
+}
+
+.button:pressed, .button:armed {
+    -fx-background-image: url('hover_Pressed.png'); /* Background image when pressed */
+    -fx-background-color: transparent; /* Make background color transparent to show image */
+}
+
+/* TableView styles with a pixel art theme */
+.table-view {
+    -fx-background-color: #ffffff; /* White background for the table */
+    -fx-table-cell-border-color: transparent; /* Remove cell borders for a clean look */
+    -fx-base: #00c4cc; /* Cyan color for table selection, matching the base color */
+}
+
+/* TableColumn header styles */
+.column-header-background {
+    -fx-background-color: #ffcd38; /* Bright yellow background for headers, matching the title */
+}
+
+.column-header {
+    -fx-font-family: 'Press Start 2P', cursive; /* Retro pixelated font for headers */
+    -fx-font-size: 12px; /* Smaller font size for headers */
+    -fx-text-fill: #000000; /* Black text for contrast */
+}
+
+/* Table row styles */
+.table-row-cell {
+    -fx-cell-size: 24px; /* Larger cells for a blocky, pixelated look */
+    -fx-font-family: 'Press Start 2P', cursive; /* Retro pixelated font for table cells */
+    -fx-font-size: 10px; /* Smaller font size for table content */
+    -fx-text-fill: #000000; /* Black text for visibility */
+}
+
+/* Table cell styles, removing padding for a more pixelated look */
+.table-cell {
+   -fx-font-family: 'Press Start 2P', cursive;
+       -fx-font-size: 10px;
+       -fx-text-fill: #000000;
+       -fx-alignment: center; /* Center text in cells */
+       -fx-border-color: #00c4cc; /* Border color for cells */
+}
+/* ScrollBar styles */
+.scroll-bar {
+    -fx-background-color: #00c4cc;
+    -fx-pref-width: 10; /* Reduce the width of the scrollbar */
+}
+
+.scroll-bar .thumb {
+    -fx-background-color: #ffcd38; /* Thumb color matching the headers */
+}
+
+/* Highlighting the selected row */
+.table-row-cell:selected {
+    -fx-background-color: #ff6188; /* A vibrant pink for the selected row, for contrast */
+    -fx-text-fill: #ffffff; /* White text for selected row for better visibility */
+}
+
+/* ListView styles with a pixel art theme */
+.list-view {
+    -fx-background-color: #ffffff; /* White background for the list */
+    -fx-border-color: #00c4cc; /* Cyan color for list border, matching the TableView */
+    -fx-border-width: 2; /* Border width for list */
+}
+
+/* List cells styles with a pixel art theme */
+.list-cell {
+    -fx-background-color: transparent; /* Transparent background for cells */
+    -fx-text-fill: #000000; /* Black text for visibility */
+    -fx-font-family: 'Press Start 2P', cursive; /* Retro pixelated font for list cells */
+    -fx-font-size: 10px; /* Font size for list content */
+    -fx-border-color: transparent; /* No borders for cells */
+    -fx-padding: 10px; /* Padding for cells */
+}
+
+.list-cell:filled:selected, .list-cell:filled:selected:focused {
+    -fx-background-color: #ff6188; /* Pink background for selected item */
+    -fx-text-fill: #ffffff; /* White text for selected item */
+}
+
+/* Label styles with a pixel art theme */
+.label {
+    -fx-font-family: 'Press Start 2P', cursive; /* 使用像素艺术风格的字体 */
+    -fx-font-size: 25px; /* 使用像素单位大小 */
+    -fx-text-fill: #ffcd38; /* 与标题相似的亮黄色 */
+    -fx-background-color: #00c4cc; /* 背景颜色与根元素相同 */
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.8), 5, 0.0, 0, 1); /* 阴影效果与标题相同 */
+}
+
+.label:focused {
+    -fx-background-color: #ffcd38; /* 聚焦时背景颜色变为亮黄色 */
+    -fx-border-color: #ffffff; /* 聚焦时边框颜色变为白色 */
+}

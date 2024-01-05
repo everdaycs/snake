@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<?import javafx.scene.layout.HBox?>
+<AnchorPane fx:id="setBackground" xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            stylesheets="@styles/gameStyle.css"
+            fx:controller="com.example.cyc_snake.controllers.LeaderboardViewController">
+    <VBox spacing="10" alignment="TOP_CENTER">
+        <Label text="Leaderboard" styleClass="title"/>
+        <TableView fx:id="leaderboardTable" styleClass="table-view">
+            <columns>
+                <TableColumn fx:id="playerNameColumn" text="Player Name" minWidth="200">
+                    <cellValueFactory><PropertyValueFactory property="playerName"/></cellValueFactory>
+                </TableColumn>
+                <!-- 其他列定义 -->
+            </columns>
+            <columns>
+                <TableColumn fx:id="scoreColumn" text="Score" minWidth="195">
+                    <cellValueFactory><PropertyValueFactory property="score"/></cellValueFactory>
+                </TableColumn>
+                <!-- 其他列定义 -->
+            </columns>
+            <columns>
+                <TableColumn fx:id="timeColumn" text="GameTime" minWidth="195">
+                    <cellValueFactory><PropertyValueFactory property="gameTime"/></cellValueFactory>
+                </TableColumn>
+                <!-- 其他列定义 -->
+            </columns>
+        </TableView>
+        <HBox spacing="10">
+            <Button text="Sort by Score" onAction="#sortByScore" styleClass="button"/>
+            <Button text="Sort by Time" onAction="#sortByTime" styleClass="button"/>
+            <Button text="To the Main" fx:id="BacktoMain" onAction="#handleBackToInitialize" styleClass="button"/>
+            <Button text="Download the data" fx:id="DownLoad" onAction="#downloadTheData" styleClass="button"/>
+        </HBox>
+    </VBox>
+</AnchorPane>

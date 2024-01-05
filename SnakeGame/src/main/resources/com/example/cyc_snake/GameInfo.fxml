@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="backgroundPane" prefHeight="700.0" prefWidth="1400.0" stylesheets="@styles/gameStyle.css" xmlns="http://javafx.com/javafx/17.0.6" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.cyc_snake.controllers.GameinforController">
+    <ImageView fitHeight="43.0" fitWidth="44.0" layoutX="250.0" layoutY="149.0" preserveRatio="true" smooth="true">
+        <image>
+            <!-- You need to specify the Image here -->
+            <Image url="@../../../images/BlackApple.png" />
+        </image>
+    </ImageView>
+    <ImageView fitHeight="43.0" fitWidth="61.0" layoutX="250.0" layoutY="192.0" preserveRatio="true" smooth="true">
+        <image>
+            <!-- You need to specify the Image here -->
+            <Image url="@../../../images/GoldApple.png" />
+        </image>
+    </ImageView>
+    <ImageView fitHeight="43.0" fitWidth="61.0" layoutX="249.0" layoutY="235.0" preserveRatio="true" smooth="true">
+        <image>
+            <!-- You need to specify the Image here -->
+            <Image url="@../../../images/GreenApple.png" />
+        </image>
+    </ImageView>
+    <ImageView fitHeight="43.0" fitWidth="56.0" layoutX="251.0" layoutY="281.0" preserveRatio="true" smooth="true">
+        <image>
+            <!-- You need to specify the Image here -->
+            <Image url="@../../../images/BlackApple.png" />
+        </image>
+    </ImageView>
+    <ImageView fitHeight="43.0" fitWidth="66.0" layoutX="250.0" layoutY="106.0" preserveRatio="true" smooth="true">
+        <image>
+            <!-- You need to specify the Image here -->
+            <Image url="@../../../images/RedApple.png" />
+        </image>
+    </ImageView>
+    <ImageView fitHeight="40.0" fitWidth="44.0" layoutX="252.0" layoutY="330.0" preserveRatio="true" smooth="true">
+        <image>
+            <!-- You need to specify the Image here -->
+            <Image url="@../../../images/up.png" />
+        </image>
+    </ImageView>
+    <ImageView fitHeight="42.0" fitWidth="44.0" layoutX="252.0" layoutY="375.0" preserveRatio="true" smooth="true">
+        <image>
+            <!-- You need to specify the Image here -->
+            <Image url="@../../../images/down.png" />
+        </image>
+    </ImageView>
+    <ImageView fitHeight="42.0" fitWidth="42.0" layoutX="253.0" layoutY="417.0" preserveRatio="true" smooth="true">
+        <image>
+            <!-- You need to specify the Image here -->
+            <Image url="@../../../images/left.png" />
+        </image>
+    </ImageView>
+    <ImageView fitHeight="43.0" fitWidth="42.0" layoutX="253.0" layoutY="459.0" preserveRatio="true" smooth="true">
+        <image>
+            <!-- You need to specify the Image here -->
+            <Image url="@../../../images/right.png" />
+        </image>
+    </ImageView>
+    <ImageView fitHeight="73.0" fitWidth="62.0" layoutX="243.0" layoutY="490.0" preserveRatio="true" smooth="true">
+        <image>
+            <!-- You need to specify the Image here -->
+            <Image url="@../../../images/esc.png" />
+        </image>
+    </ImageView>
+
+     <Label layoutX="530.0" layoutY="40.0" prefHeight="43.0" prefWidth="279.0" styleClass="title" text="     Game Information">
+         <font>
+             <Font name="Arial" size="24.0" />
+         </font>
+     </Label>
+
+     <Label layoutX="322.0" layoutY="292.0" styleClass="label" text="  Black apple, game ove immediately  " />
+
+     <Label layoutX="507.0" layoutY="580.0" styleClass="label" />
+     <Label layoutX="322.0" layoutY="118.0" styleClass="content" text="  Red apple, the most normal one, get one score and one unit length  " />
+
+     <Label layoutX="322.0" layoutY="161.0" styleClass="label" text="  Blue apple, speed up in 5s  " />
+     <Label layoutX="322.0" layoutY="204.0" styleClass="content" text="  Gloden apple, get 3 scores  " />
+     <Label layoutX="322.0" layoutY="247.0" styleClass="content" text="  Green apple, speed down in 5s  " />
+
+           <!-- 返回按钮 -->
+     <Button fx:id="backToInitializingButton" layoutX="661.0" layoutY="628.0" onAction="#handleBackToInitializing" styleClass="button" text="Back" />
+   <Label layoutX="324.0" layoutY="339.0" styleClass="label" text="  Control the snake to move up  " />
+   <Label layoutX="322.0" layoutY="386.0" styleClass="label" text="  Control the snake to move down  " />
+   <Label layoutX="322.0" layoutY="428.0" styleClass="label" text="  Control the snake to move left  " />
+   <Label layoutX="322.0" layoutY="470.0" styleClass="label" text="  Control the snake to move right  " />
+   <Label layoutX="322.0" layoutY="511.0" styleClass="label" />
+   <Label layoutX="322.0" layoutY="511.0" styleClass="label" text="  pause game  " />
+   <Label layoutX="322.0" layoutY="586.0" styleClass="label" />
+   <Label layoutX="322.0" layoutY="580.0" styleClass="label" text=" In this game, the borders shrink once every ten seconds." />
+</AnchorPane>

@@ -1,0 +1,57 @@
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import com.example.cyc_snake.ui.GamePanelFX?>
+
+<BorderPane fx:id="gameAnchorPane" onKeyPressed="#handleKeyPressed" prefHeight="700.0" prefWidth="1400.0" stylesheets="@styles/gameStyle.css" xmlns="http://javafx.com/javafx/17.0.6" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.cyc_snake.controllers.GameViewController">
+    <left>
+        <com.example.cyc_snake.ui.GamePanelFX fx:id="gamePanelFX" />
+    </left>
+    <right>
+        <VBox prefHeight="691.0" prefWidth="272.0" spacing="10" style="-fx-padding: 15;">
+            <Label fx:id="scoreLabel" text="Score: 0" />
+            <Label fx:id="lengthLabel" text="Length: 0" />
+            <Label fx:id="timeLabel" text="Playtime: 0" />
+         <HBox prefHeight="80.0" prefWidth="336.0" />
+
+            <!-- Image for the golden apple -->
+            <HBox alignment="CENTER_LEFT" prefHeight="60.0" prefWidth="300.0" spacing="5">
+                <ImageView fitHeight="75.0" fitWidth="75.0">
+                    <Image url="@../../../images/GoldApple.png" />
+                </ImageView>
+                <Label text="score + 3" />
+            </HBox>
+            <!-- Image for the blue apple -->
+            <HBox alignment="CENTER_LEFT" prefHeight="60.0" prefWidth="300.0" spacing="5">
+                <ImageView fitHeight="75.0" fitWidth="75.0">
+                    <Image url="@../../../images/BlueApple.png" />
+                </ImageView>
+                <Label text="Accelerate" />
+            </HBox>
+            <!-- Black Apple and its effect -->
+            <HBox alignment="CENTER_LEFT" prefHeight="60.0" prefWidth="300.0" spacing="5">
+                <ImageView fitHeight="75.0" fitWidth="75.0">
+                    <Image url="@../../../images/BlackApple.png" />
+                </ImageView>
+                <Label text="GameOver" />
+            </HBox>
+            <!-- Green Apple and its effect -->
+            <HBox alignment="CENTER_LEFT" prefHeight="60.0" prefWidth="300.0" spacing="5">
+                <ImageView fitHeight="75.0" fitWidth="75.0">
+                    <Image url="@../../../images/GreenApple.png" />
+                </ImageView>
+                <Label text="Slow Down" />
+            </HBox>
+            <!-- Image for the red apple -->
+            <HBox alignment="CENTER_LEFT" prefHeight="60.0" prefWidth="300.0" spacing="5">
+                <ImageView fitHeight="75.0" fitWidth="75.0">
+                    <Image url="@../../../images/RedApple.png" />
+                </ImageView>
+                <Label text="normal apple" />
+            </HBox>
+        </VBox>
+    </right>
+</BorderPane>
